@@ -4,17 +4,39 @@ void setup(){
    pinMode(4, OUTPUT);
    pinMode(5, OUTPUT);
    pinMode(6, OUTPUT);
-}
+   pinMode(7, INPUT_PULLUP);
+   }
 
 int a = 2;
-int delay_time_on = 500;
+int select = 0;
+int delay_time_on = 200;
 int delay_time_off = 0;
 
 void loop(){
-  for(a=2; a <= 6; a = a + 1){
-   digitalWrite(a, HIGH);
-   delay(delay_time_on);
-   digitalWrite(a, LOW);
-   delay(delay_time_off);
-   }
+
+  select = !digitalRead(7);
+  
+  if (select)
+  { 
+    for(a=6; a >= 2; a = a - 1)
+    {
+      digitalWrite(a, HIGH);
+      delay(delay_time_on);
+      digitalWrite(a, LOW);
+      delay(delay_time_off);
+    }
+  }
+  else 
+  {
+    for(a=2; a <= 6; a = a + 1)
+    {
+      digitalWrite(a, HIGH);
+      delay(delay_time_on);
+    }
+    for(a=2; a <= 6; a = a + 1)
+    {
+      digitalWrite(a, LOW);
+      delay(delay_time_off);
+    }
+  }
 }
