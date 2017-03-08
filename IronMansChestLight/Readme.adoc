@@ -85,7 +85,19 @@ image::ArduinoNano3.0.png[]
 
 Further reading: https://learn.adafruit.com/adafruit-neopixel-uberguide/power
 
-== Making of the Breadboard schematics
+== Teacher's notes
+
+=== Didactical stuff
+With reading, re-doing the example the student should then have some time to enhance copies of the example to realize some more sophisticated functionalities.
+
+The NeoPixel is perfect to teach
+
+variables,
+arrays
+increments
+underflow, overflow protection and handling.
+
+=== Making of the Breadboard schematics
 The breadboard schematics has been created using the great http://fritzing.org/home/[Fritzing] program.
 The source file is `IronMansChestLight.fzz`, the PNG has been exported from within Fritzing.
 
