@@ -9,7 +9,7 @@ void setup(){
 
 int a = 2;
 int select = 0;
-int delay_time_on = 200;
+int delay_time_on = 300;
 int delay_time_off = 0;
 
 void loop(){
